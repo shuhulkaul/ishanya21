@@ -1,0 +1,43 @@
+.one {
+  margin: 0px;
+  width: 140px;
+  height: 140px;
+  border: 2px solid #333;
+  transform: scaleY(-1);
+  background-color: aqua;
+}
+.two {
+  float: left;
+  width: 70px;
+  height: 75px;
+  border-width: 2px;
+  border-style: solid;
+  margin: -2px 0 0 -2px;
+  border-color: #fff #333 #333 #fff;
+  
+}
+.container {
+  
+    z-index: 400;
+}
+.logo{
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    background: #1a0729;
+}
+body{
+    cursor: none;
+    margin: 0;
+}
+.ishanya{
+   
+    margin-left: 1200px;
+    margin-top:200px;
+}
