@@ -1,7 +1,7 @@
 $(document).on("click mousemove", "body", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  var newposX = x-750;
+  var newposX = x-660;
   var newposY = y;
   // $(".container").css(
   //   "transform",
