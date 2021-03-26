@@ -7,12 +7,38 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="./css/style2.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <div class="container"></div>
-    <div class="logo">
+  <body id="body">
+    <div class="parent">
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        id="container"
+        style="
+          -webkit-mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg);
+        "
+        class="container"
+      >
+        <source src="./video/3d_ocean_1590675653.webm" type="video/webm" />
+      </video>
+      <!-- <div class="logo">
       <img class="ishanya" src="img/ishanya_logo.svg" />
+    </div> -->
+      <div class="btn">
+        <a href="#">
+          <img
+            class="button"
+            onmouseleave="myLeaveFunction(event)"
+            onmouseover="myOverFunction(event)"
+            src="./img/Group 437.svg"
+            alt="I'm a link."
+          />
+        </a>
+        <!-- <button type="button"  onmouseleave="myLeaveFunction(event)" onmouseover="myOverFunction(event)">HEHE</button> -->
+      </div>
     </div>
   </body>
 </html>

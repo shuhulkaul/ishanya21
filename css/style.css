@@ -1,42 +1,71 @@
-.one {
-  margin: 0px;
-  width: 140px;
-  height: 140px;
-  border: 2px solid #333;
-  transform: scaleY(-1);
-  background-color: aqua;
+/* .logo {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+} */
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
-.two {
-  float: left;
-  width: 70px;
-  height: 75px;
-  border-width: 2px;
-  border-style: solid;
-  margin: -2px 0 0 -2px;
-  border-color: #fff #333 #333 #fff;
-  
+body {
+  background-color: #1c0c2d;
+  /* background-image: url('../img/737751.jpg'); */
+  background-position: 0px, 0px;
+  cursor: none;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+/* .ishanya {
+  margin-left: 670px;
+  margin-top: 350px;
+} */
 .container {
-    z-index: 400;
+  /* z-index: 9; */
+  /* width: 100vw;
+  height: 100vh; */
+  /* padding: 1rem; */
+  overflow: hidden;
+  position: absolute;
+  /* background-image: url('../img/737751.jpg'); */
+  background-size: cover;
+  background-position: 0px, 0px;
+  background-repeat: no-repeat;
+
+  -webkit-mask-size: 70vmin;
+  -webkit-mask-repeat: no-repeat;
+
+  /* -webkit-mask-image: "";
+  -webkit-mask-size: "";
+  -webkit-mask-repeat: ""; */
+  /* -webkit-mask-position: 783px , 100px ; */
 }
-.logo{
-    z-index: 500;
-    width: 100%;
-    height: 100%;
-    position:fixed;
+.btn {
+  /* z-index: 8; */
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
 }
-.banner{
-    width: 100%;
-    height: 100%;
-    position:fixed;
-    background: #1a0729;
-}
-body{
-    cursor: none;
-    margin: 0;
-}
-.ishanya{
-   
-    margin-left: 1200px;
-    margin-top:200px;
+.button {
+  cursor: none;
+  /* background-color: #1c0c2d; 
+  border: 3px;
+  border-color: #6de2d5;
+  border-style: solid; */
+  color: #6de2d5;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: bold;
+  display: block;
+  margin-left: 890px;
+  margin-top: 380px;
+  font-size: 16px;
+  /* width: 20%;
+  height: 20%; */
+  /* transform: scale(0.7); */
 }
