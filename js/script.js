@@ -35,11 +35,12 @@ function myLeaveFunction(e) {
 }
 
 function myClickFunction(e) {
-  $(".parent").fadeOut(6000);
-  $(".mainText").fadeIn({duration: 2000, queue: true});
-  $(".mainText").animate({zoom: "130%" }, 3000, "linear");
-  $(".mainText").animate({ zoom: "20000%", opacity: 0 }, 1200, "linear");
+  $(".parent").fadeOut(3000);
+  $(".mainText").fadeIn({duration: 1500, queue: true});
+  $(".mainText").animate({zoom: "115%" }, 3000, "linear");
+  $(".mainText").animate({ zoom: "10000%", opacity: 0 }, 800);
   // $(".mainText").hide( { duration: 8000, queue: false })
   $(".mainText").fadeOut();
-  $(".page2").fadeIn(4000);
+  // setTimeout(function(){}, 2000);
+  $(".page2").fadeIn(5000);
 }

@@ -96,13 +96,13 @@ body {
   /* text-align: center; */
   font-size: 45px;
   font-family: "Space Mono", monospace;
-  width: 20em;
+  width: 20em;  
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
 }
 .page2 {
-  display: none;
+  
   background-color: #6de2d5;
   /* background-image: url('../img/737751.jpg'); */
   background-position: 0px, 0px;
