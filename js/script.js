@@ -1,3 +1,22 @@
+window.onload = function () {
+  // Safari 3.0+ "[object HTMLElementConstructor]"
+  var isSafari =
+    /constructor/i.test(window.HTMLElement) ||
+    (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]";
+    })(
+      !window["safari"] ||
+        (typeof safari !== "undefined" && window["safari"].pushNotification)
+    );
+
+  // Internet Explorer 6-11
+  var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+
+  if (isSafari || isIE) {
+    document.getElementsByClassName("parent")[0].style.display = "none";
+    document.getElementsByClassName("popup")[0].style.display = "block";
+  }
+};
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
@@ -11,10 +30,7 @@ $(document).on("click mousemove", ".parent", function (e) {
     "-webkit-mask-position",
     newposX + "px " + newposY + "px"
   );
-  $(".container").css(
-    "mask-position",
-    newposX + "px " + newposY + "px"
-  );
+  $(".container").css("mask-position", newposX + "px " + newposY + "px");
 });
 
 function myOverFunction(e) {
@@ -40,14 +56,14 @@ function myLeaveFunction(e) {
 
 function myClickFunction(e) {
   $(".parent").fadeOut(3000);
-  $(".mainText").fadeIn({ duration: 1500, queue: true });
-  $(".mainText").animate({ zoom: "115%" }, 3000, "linear");
-  $(".mainText").animate({ zoom: "10000%", opacity: 0 }, 800);
+  $(".mainText").fadeIn({ duration: 1000, queue: true });
+  $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
+  $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
 
   if ((verOffset = navigator.userAgent.indexOf("Firefox")) != -1) {
     document
       .getElementsByClassName("pmainText")[0]
-      .setAttribute("style", "-moz-animation: zoom 6s;");
+      .setAttribute("style", "-moz-animation: zoom 5s;");
   }
   // $(".mainText").hide( { duration: 8000, queue: false })
   $(".mainText").fadeOut();

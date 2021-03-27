@@ -12,6 +12,7 @@ video {
   height: auto;
 }
 body {
+  cursor: url(../cursor/cursor2.svg), auto;
   background-color: #1c0c2d;
   /* background-image: url('../img/737751.jpg'); */
   background-position: 0px, 0px;
@@ -126,6 +127,31 @@ body {
     transform: scale(1, 1);
   }
   to {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.15, 1.15);
   }
+}
+
+.popup {
+  /* position: absolute; */
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin: 0px;
+  /* opacity: 0.2; */
+  display: none;
+  height: 100%;
+  text-align: center;
+  width: 1920px;
+}
+
+.pp {
+  cursor: url(../cursor/cursor2.svg), auto;
+  color: white;
+  font-size: 25px;
+  font-family: "Space Mono", monospace;
+  margin-top: 5%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
 }
