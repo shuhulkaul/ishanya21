@@ -16,25 +16,27 @@ window.onload = function () {
     document.getElementsByClassName("parent")[0].style.display = "none";
     document.getElementsByClassName("popup")[0].style.display = "block";
   }
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    alert(1);
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
     document.getElementsByClassName("parent")[0].style.display = "none";
-    document.getElementsByClassName("pp")[0].innerHTML = "Please switch to your desktop browser."
+    document.getElementsByClassName("pp")[0].innerHTML =
+      "Please switch to your desktop browser.";
     document.getElementsByClassName("popup")[0].style.display = "block";
-  }
-  else{
-    var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
-    if(isMobile){
-      alert(21);
+  } else {
+    var isMobile =
+      Math.min(window.screen.width, window.screen.height) < 768 ||
+      navigator.userAgent.indexOf("Mobi") > -1;
+    if (isMobile) {
       document.getElementsByClassName("parent")[0].style.display = "none";
-      document.getElementsByClassName("pp")[0].innerHTML = "Please switch to your desktop browser."
+      document.getElementsByClassName("pp")[0].innerHTML =
+        "Please switch to your desktop browser.";
       document.getElementsByClassName("popup")[0].style.display = "block";
     }
   }
 };
-
-
-
 
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
