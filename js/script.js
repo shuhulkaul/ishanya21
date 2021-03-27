@@ -35,10 +35,10 @@ function myLeaveFunction(e) {
 }
 
 function myClickFunction(e) {
-  $(".parent").fadeOut(4000);
-  $(".mainText").fadeIn(1500);
-  $(".mainText").animate({ opacity: 1, zoom: "150%" }, 2600, "linear");
-  $(".mainText").animate({ zoom: "20000%", opacity: 0 }, 1000, "linear");
+  $(".parent").fadeOut(6000);
+  $(".mainText").fadeIn({duration: 2000, queue: true});
+  $(".mainText").animate({zoom: "130%" }, 3000, "linear");
+  $(".mainText").animate({ zoom: "20000%", opacity: 0 }, 1200, "linear");
   // $(".mainText").hide( { duration: 8000, queue: false })
   $(".mainText").fadeOut();
   $(".page2").fadeIn(4000);
