@@ -5,7 +5,7 @@
   position: fixed;
 } */
 video {
-  cursor: none;
+  cursor: url(../cursor/cursor2.svg), auto;
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -15,7 +15,7 @@ body {
   background-color: #1c0c2d;
   /* background-image: url('../img/737751.jpg'); */
   background-position: 0px, 0px;
-  /* cursor: none; */
+  /* cursor: url(../cursor/cursor2.svg), auto; */
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -41,7 +41,7 @@ body {
   background-size: cover;
   background-position: 0px, 0px;
   background-repeat: no-repeat;
-  cursor: none;
+  cursor: url(../cursor/cursor2.svg), auto;
   -webkit-mask-size: 70vmin;
   -webkit-mask-repeat: no-repeat;
 
@@ -52,15 +52,16 @@ body {
 }
 .btn {
   /* z-index: 8; */
-  width: fit-content;
+  width: 1602px;
   height: fit-content;
   position: fixed;
-  cursor: none;
+  cursor: url(../cursor/cursor2.svg), auto;
 }
 .button {
-
-  cursor: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA70lEQVRYhe3XOwrCMByA8S9tqg4dRMFFQTyAk3fyIF7IW3gF8QKCq5Ngm0iKOPlonnXof2+/X180EYtyfQKmpB8BXCQwA8YdAMyoDKg6ipupsg7jzfSAHtAD/gKguwRIdKD/gHAEZDI7ACOP9B2YqFotXc4j8yLfAoUnYINmp5RaWQPQHD3izb0XQgygvrkc7fkVvB58CeSJAY5vXThAmHEEhLl6Mw6AcHEHQNi4JSB83AIQJ94SEC/eAhA3/gMQP/4FkCb+AZAu/gaQNm6CZnMaIm7OY5Z2Zp9ps8QbPgHeV34G9mjmiGaB0mYEcH0AdmwegaWMcpkAAAAASUVORK5CYII=), auto;
-  /* cursor: none; */
+  /* cursor: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA70lEQVRYhe3XOwrCMByA8S9tqg4dRMFFQTyAk3fyIF7IW3gF8QKCq5Ngm0iKOPlonnXof2+/X180EYtyfQKmpB8BXCQwA8YdAMyoDKg6ipupsg7jzfSAHtAD/gKguwRIdKD/gHAEZDI7ACOP9B2YqFotXc4j8yLfAoUnYINmp5RaWQPQHD3izb0XQgygvrkc7fkVvB58CeSJAY5vXThAmHEEhLl6Mw6AcHEHQNi4JSB83AIQJ94SEC/eAhA3/gMQP/4FkCb+AZAu/gaQNm6CZnMaIm7OY5Z2Zp9ps8QbPgHeV34G9mjmiGaB0mYEcH0AdmwegaWMcpkAAAAASUVORK5CYII=),
+    auto; */
+    cursor: url(../cursor/cursor2.svg), auto;
+  /* cursor: url(../cursor/cursor2.svg), auto; */
   /* background-color: #1c0c2d; 
   border: 3px;
   border-color: #6de2d5;
@@ -88,10 +89,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
+  cursor: url(../cursor/cursor2.svg), auto;
 }
 .pmainText {
-  cursor: none;
+  cursor: url(../cursor/cursor2.svg), auto;
   /* background-color: #1c0c2d; 
   border: 3px;
   border-color: #6de2d5;
@@ -100,13 +101,12 @@ body {
   /* text-align: center; */
   font-size: 45px;
   font-family: "Space Mono", monospace;
-  width: 20em;  
+  width: 20em;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
 }
 .page2 {
-  
   background-color: #6de2d5;
   /* background-image: url('../img/737751.jpg'); */
   background-position: 0px, 0px;

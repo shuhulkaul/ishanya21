@@ -2,7 +2,7 @@ $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
   var newposX = x - 660;
-  var newposY = y;
+  var newposY = y + 30;
   // $(".container").css(
   //   "transform",
   //   "translate3d(" + newposX + "px," + newposY + "px, 0px) "
@@ -36,8 +36,8 @@ function myLeaveFunction(e) {
 
 function myClickFunction(e) {
   $(".parent").fadeOut(3000);
-  $(".mainText").fadeIn({duration: 1500, queue: true});
-  $(".mainText").animate({zoom: "115%" }, 3000, "linear");
+  $(".mainText").fadeIn({ duration: 1500, queue: true });
+  $(".mainText").animate({ zoom: "115%" }, 3000, "linear");
   $(".mainText").animate({ zoom: "10000%", opacity: 0 }, 800);
   // $(".mainText").hide( { duration: 8000, queue: false })
   $(".mainText").fadeOut();
