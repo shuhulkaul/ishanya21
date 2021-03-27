@@ -1,3 +1,4 @@
+//Checking for browser compatibility
 window.onload = function () {
   // Safari 3.0+ "[object HTMLElementConstructor]"
   var isSafari =
@@ -8,7 +9,6 @@ window.onload = function () {
       !window["safari"] ||
         (typeof safari !== "undefined" && window["safari"].pushNotification)
     );
-
   // Internet Explorer 6-11
   var isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
@@ -16,6 +16,8 @@ window.onload = function () {
     document.getElementsByClassName("parent")[0].style.display = "none";
     document.getElementsByClassName("popup")[0].style.display = "block";
   }
+
+  //Checking for mobile browsers
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -38,15 +40,12 @@ window.onload = function () {
   }
 };
 
+//Moving mask with the cursor location
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
   var newposX = x - 660;
   var newposY = y + 30;
-  // $(".container").css(
-  //   "transform",
-  //   "translate3d(" + newposX + "px," + newposY + "px, 0px) "
-  // );
   $(".container").css(
     "-webkit-mask-position",
     newposX + "px " + newposY + "px"
@@ -54,6 +53,7 @@ $(document).on("click mousemove", ".parent", function (e) {
   $(".container").css("mask-position", newposX + "px " + newposY + "px");
 });
 
+//Function for mouse over the button
 function myOverFunction(e) {
   document
     .getElementsByTagName("img")[0]
@@ -63,6 +63,7 @@ function myOverFunction(e) {
     .setAttribute("style", "-webkit-mask-image: ''; mask-image: '';");
 }
 
+//Function when mouse leaves the button
 function myLeaveFunction(e) {
   document
     .getElementsByTagName("img")[0]
@@ -75,19 +76,18 @@ function myLeaveFunction(e) {
     );
 }
 
+//Function when mouse clicks on the button
 function myClickFunction(e) {
   $(".parent").fadeOut(3000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
   $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
   $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
-
+  //Firefox animation only
   if ((verOffset = navigator.userAgent.indexOf("Firefox")) != -1) {
     document
       .getElementsByClassName("pmainText")[0]
       .setAttribute("style", "-moz-animation: zoom 5s;");
   }
-  // $(".mainText").hide( { duration: 8000, queue: false })
   $(".mainText").fadeOut();
-  // setTimeout(function(){}, 2000);
   $(".page2").fadeIn(5000);
 }
