@@ -17,6 +17,13 @@ window.onload = function () {
     document.getElementsByClassName("popup")[0].style.display = "block";
   }
 };
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  document.getElementsByClassName("parent")[0].style.display = "none";
+  document.getElementsByClassName("pp")[0].innerHTML = "Please switch to your desktop browser."
+  document.getElementsByClassName("popup")[0].style.display = "block";
+}
+
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
