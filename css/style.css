@@ -5,6 +5,7 @@
   position: fixed;
 } */
 video {
+  cursor: none;
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -14,12 +15,14 @@ body {
   background-color: #1c0c2d;
   /* background-image: url('../img/737751.jpg'); */
   background-position: 0px, 0px;
-  cursor: none;
+  /* cursor: none; */
   margin: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 /* .ishanya {
   margin-left: 670px;
@@ -36,7 +39,7 @@ body {
   background-size: cover;
   background-position: 0px, 0px;
   background-repeat: no-repeat;
-
+  cursor: none;
   -webkit-mask-size: 70vmin;
   -webkit-mask-repeat: no-repeat;
 
@@ -50,6 +53,7 @@ body {
   width: fit-content;
   height: fit-content;
   position: fixed;
+  cursor: none;
 }
 .button {
   cursor: none;
@@ -63,9 +67,50 @@ body {
   text-decoration: bold;
   display: block;
   margin-left: 890px;
-  margin-top: 380px;
+  margin-top: 550px;
   font-size: 16px;
   /* width: 20%;
   height: 20%; */
   /* transform: scale(0.7); */
+}
+.mainText {
+  width: 10100%;
+  height: 100%;
+  /* position: fixed; */
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-left: -5000%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+}
+.pmainText {
+  cursor: none;
+  /* background-color: #1c0c2d; 
+  border: 3px;
+  border-color: #6de2d5;
+  border-style: solid; */
+  color: white;
+  /* text-align: center; */
+  font-size: 45px;
+  font-family: "Space Mono", monospace;
+  width: 20em;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+.page2 {
+  display: none;
+  background-color: #6de2d5;
+  /* background-image: url('../img/737751.jpg'); */
+  background-position: 0px, 0px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,15 +1,7 @@
-function changeVal(a) {
-  if (a == 0) {
-    return 660;
-  } else {
-    return 0;
-  }
-}
-
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  var newposX = x - changeVal(0);
+  var newposX = x - 660;
   var newposY = y;
   // $(".container").css(
   //   "transform",
@@ -22,7 +14,6 @@ $(document).on("click mousemove", ".parent", function (e) {
 });
 
 function myOverFunction(e) {
-  document.getElementById("container").style.setProperty("webkitMaskImage", "");
   document
     .getElementsByTagName("img")[0]
     .setAttribute("src", "./img/Group 437(FILL).svg");
@@ -41,4 +32,14 @@ function myLeaveFunction(e) {
       "style",
       "-webkit-mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg);"
     );
+}
+
+function myClickFunction(e) {
+  $(".parent").fadeOut(4000);
+  $(".mainText").fadeIn(1500);
+  $(".mainText").animate({ opacity: 1, zoom: "150%" }, 2600, "linear");
+  $(".mainText").animate({ zoom: "20000%", opacity: 0 }, 1000, "linear");
+  // $(".mainText").hide( { duration: 8000, queue: false })
+  $(".mainText").fadeOut();
+  $(".page2").fadeIn(4000);
 }

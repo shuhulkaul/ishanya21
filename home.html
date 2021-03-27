@@ -1,6 +1,11 @@
 <html>
   <head>
     <title>Ishanya '21</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -10,6 +15,12 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body id="body">
+    <div class="mainText" style="display: none">
+      <p class="pmainText">When tommorrow comes today.</p>
+    </div>
+    <div class="page2">
+      <p class="pmainText">The second page.</p>
+    </div>
     <div class="parent">
       <video
         playsinline
@@ -18,7 +29,7 @@
         loop
         id="container"
         style="
-          -webkit-mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg);
+          -webkit-mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg); ;
         "
         class="container"
       >
@@ -33,6 +44,7 @@
             class="button"
             onmouseleave="myLeaveFunction(event)"
             onmouseover="myOverFunction(event)"
+            onclick="myClickFunction(event)"
             src="./img/Group 437.svg"
             alt="I'm a link."
           />
