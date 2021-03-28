@@ -211,7 +211,7 @@ body {
   position: absolute;
   width: 32vh;
   height: 60vh;
-  right: 65vw;
+  left: 18vw;
   top: 7vw;
   font-family: Barlow;
   font-style: normal;
@@ -260,4 +260,25 @@ body {
   right: 92.67%;
   top: 3vw;
   bottom: 91.9%;
+}
+.exb {
+  position: absolute;
+  /* width: 10vw; */
+  /* height: 84px; */
+  left: 8vw;
+  top: 70vh;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8vh;
+  /* line-height: 18px; */
+  /* display: flex; */
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+ 
+}
+.slide
+{
+  overflow-x: scroll;
 }

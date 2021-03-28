@@ -42,24 +42,30 @@
           <div class="chevron"></div>
         </div>
       </div>
-      <div class="section">
+      <div id="section" class="section">
         <!-- <div class="scrollAnimationContainerReflect">
           <div class="chevron"></div>
           <div class="chevron"></div>
           <div class="chevron"></div>
         </div> -->
-        <img class="exbImage" src="./img/cm28rnmv.bmp" />
-        <img class="exbHamburger" src="./svg/hamburger.svg" />
-        <p class="exbText">
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-          no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <img class="art1" src="./svg/Group 412.svg" />
         <img class="art2" src="./svg/Group 999.svg" />
-        <video controls class="exbVideo">
-          <source src="./video/3d_ocean_1590675653.webm" type="video/webm" />
-        </video>
+        <img class="exbHamburger" src="./svg/hamburger.svg" />
+        <div class="slide active">
+          <img class="exbImage" src="./img/cm28rnmv.bmp" />
+          <p class="exbText">
+            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
+            no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
+            molestiae te. Ex duo eripuit mentitum.
+          </p>
+          <p class="exb">EXHIBITION</p>
+          <img class="art1" src="./svg/Group 412.svg" />
+          <video controls class="exbVideo">
+            <source src="./video/3d_ocean_1590675653.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="slide">
+          <p>Hello</p>
+        </div>
       </div>
     </div>
     <div class="parent">
@@ -94,6 +100,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/script.js"></script>
+    <script type="text/javascript" src="fullpage.continuousHorizontal.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
       integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
@@ -103,6 +110,11 @@
       new fullpage("#page2", {
         autoScrolling: true,
         scrollingSpeed: 2000,
+        scrollHorizontally: true
+      });
+      new fullpage("#section", {
+        scrollHorizontally: true,
+        controlArrows: false,
       });
     </script>
   </body>
