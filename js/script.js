@@ -1,8 +1,8 @@
-function dpiVal() {
+function dpiValH() {
   if (window.devicePixelRatio == 1.25) {
-    return 660 / 1.3;
+    return (660 + ($(window).height() - 722)) / 1.3;
   } else {
-    return 660;
+    return (660 + ($(window).height() - 937));
   }
 }
 
@@ -59,7 +59,7 @@ window.onload = function () {
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  var newposX = x - dpiVal();
+  var newposX = x - dpiValH();
   var newposY = y + 30;
   $(".container").css(
     "-webkit-mask-position",
