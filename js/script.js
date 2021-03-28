@@ -2,7 +2,7 @@ function dpiValH() {
   if (window.devicePixelRatio == 1.25) {
     return (660 + ($(window).height() - 722)) / 1.3;
   } else {
-    return (660 + ($(window).height() - 937));
+    return 660 + ($(window).height() - 937);
   }
 }
 
@@ -44,14 +44,14 @@ window.onload = function () {
       document.getElementsByClassName("pp")[0].innerHTML =
         "Please switch to your desktop browser.";
       document.getElementsByClassName("popup")[0].style.display = "block";
+    } else {
+      if (window.devicePixelRatio > 1.25) {
+        document.getElementsByClassName("parent")[0].style.display = "none";
+        document.getElementsByClassName("pp")[0].innerHTML =
+          "Your system DPI is greater than 1.25. Please change the DPI settings to 1.25 or less.";
+        document.getElementsByClassName("popup")[0].style.display = "block";
+      }
     }
-  }
-
-  if (window.devicePixelRatio > 1.25) {
-    document.getElementsByClassName("parent")[0].style.display = "none";
-    document.getElementsByClassName("pp")[0].innerHTML =
-      "Your system DPI is greater than 1.25. Please change the DPI settings to 1.25 or less.";
-    document.getElementsByClassName("popup")[0].style.display = "block";
   }
 };
 
