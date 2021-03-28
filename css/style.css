@@ -129,6 +129,7 @@ body {
 }
 .ishanyaAnimation {
   /* margin-top: 20vh; */
+  height: 25vh;
 }
 /* scroll down animation */
 .scrollAnimationContainer {
