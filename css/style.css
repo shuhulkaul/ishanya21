@@ -1,7 +1,7 @@
 video {
   cursor: url(../cursor/cursor.svg), auto;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   width: auto;
   height: auto;
 }
@@ -52,8 +52,8 @@ body {
   font-size: 16px;
 }
 .mainText {
-  width: 10100%;
-  height: 100%;
+  width: 10100vw;
+  height: 100vh;
   text-align: center;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -109,7 +109,7 @@ body {
   z-index: 100;
   margin: 0px;
   display: none;
-  height: 100%;
+  height: 100vh;
   text-align: center;
   width: 1920px;
 }
@@ -120,7 +120,7 @@ body {
   font-size: 25px;
   font-family: "Space Mono", monospace;
   margin-top: 5%;
-  width: 100%;
+  width: 100vw;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;

@@ -80,8 +80,11 @@ function myLeaveFunction(e) {
 function myClickFunction(e) {
   $(".parent").fadeOut(3000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
-  $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
-  $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
+  // $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
+  // $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
+  document
+  .getElementsByClassName("pmainText")[0]
+  .setAttribute("style", "animation: zoom 5s;");
   //Firefox animation only
   if ((verOffset = navigator.userAgent.indexOf("Firefox")) != -1) {
     document
