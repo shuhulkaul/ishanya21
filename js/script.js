@@ -1,3 +1,11 @@
+function dpiVal() {
+  if (window.devicePixelRatio == 1.25) {
+    return 660 / 1.3;
+  } else {
+    return 660;
+  }
+}
+
 //Checking for browser compatibility
 window.onload = function () {
   // Safari 3.0+ "[object HTMLElementConstructor]"
@@ -38,13 +46,20 @@ window.onload = function () {
       document.getElementsByClassName("popup")[0].style.display = "block";
     }
   }
+
+  if (window.devicePixelRatio > 1.25) {
+    document.getElementsByClassName("parent")[0].style.display = "none";
+    document.getElementsByClassName("pp")[0].innerHTML =
+      "Your system DPI is greater than 1.25. Please change the DPI settings to 1.25 or less.";
+    document.getElementsByClassName("popup")[0].style.display = "block";
+  }
 };
 
 //Moving mask with the cursor location
 $(document).on("click mousemove", ".parent", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  var newposX = x - 660;
+  var newposX = x - dpiVal();
   var newposY = y + 30;
   $(".container").css(
     "-webkit-mask-position",
@@ -80,11 +95,8 @@ function myLeaveFunction(e) {
 function myClickFunction(e) {
   $(".parent").fadeOut(3000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
-  // $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
-  // $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
-  document
-  .getElementsByClassName("pmainText")[0]
-  .setAttribute("style", "animation: zoom 5s;");
+  $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
+  $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
   //Firefox animation only
   if ((verOffset = navigator.userAgent.indexOf("Firefox")) != -1) {
     document
