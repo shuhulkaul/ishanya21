@@ -39,7 +39,12 @@ window.onload = function () {
     var isMobile =
       Math.min(window.screen.width, window.screen.height) < 768 ||
       navigator.userAgent.indexOf("Mobi") > -1;
-    if (isMobile) {
+    if (window.devicePixelRatio > 1.25) {
+      document.getElementsByClassName("parent")[0].style.display = "none";
+      document.getElementsByClassName("pp")[0].innerHTML =
+        "Your system DPR is greater than 1.25. Please change the DPI settings to 1.25 or less.";
+      document.getElementsByClassName("popup")[0].style.display = "block";
+    } else if (isMobile) {
       document.getElementsByClassName("parent")[0].style.display = "none";
       document.getElementsByClassName("pp")[0].innerHTML =
         "Please switch to your desktop browser.";
@@ -48,7 +53,7 @@ window.onload = function () {
       if (window.devicePixelRatio > 1.25) {
         document.getElementsByClassName("parent")[0].style.display = "none";
         document.getElementsByClassName("pp")[0].innerHTML =
-          "Your system DPI is greater than 1.25. Please change the DPI settings to 1.25 or less.";
+          "Your system DPR is greater than 1.25. Please change the DPI settings to 1.25 or less.";
         document.getElementsByClassName("popup")[0].style.display = "block";
       }
     }
