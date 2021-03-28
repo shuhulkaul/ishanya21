@@ -4,18 +4,19 @@
     <title>Ishanya '21</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta content="utf-8" http-equiv="encoding" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"
+      integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
+      crossorigin="anonymous"
+    />
   </head>
   <body id="body">
     <div class="popup">
@@ -27,8 +28,24 @@
     <div class="mainText" style="display: none">
       <p class="pmainText">When tommorrow comes today.</p>
     </div>
-    <div class="page2" style="display: none">
-      <p class="pmainText">The second page.</p>
+    <div class="page2" style="display: none" id="page2">
+      <div class="section active">
+        <img class="ishanyaAnimation" src="./img/Group 421.svg" />
+        <div class="scrollAnimationContainer" style="display: none">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div>
+      </div>
+      <div class="section">
+        <!-- <div class="scrollAnimationContainerReflect">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div> -->
+
+        <p class="pmainText">When tommorrow comes today.</p>
+      </div>
     </div>
     <div class="parent">
       <video
@@ -47,14 +64,31 @@
       </video>
       <div class="btn">
         <img
+          id="ibtn"
           class="button"
           onmouseleave="myLeaveFunction(event)"
           onmouseover="myOverFunction(event)"
           onclick="myClickFunction(event)"
           src="./img/Group 437.svg"
-          alt="I'm a link."
         />
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
+      integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      new fullpage("#page2", {
+        autoScrolling: true,
+        scrollingSpeed: 2000,
+      });
+    </script>
   </body>
 </html>

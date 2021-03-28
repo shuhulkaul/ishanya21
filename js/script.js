@@ -76,20 +76,18 @@ $(document).on("click mousemove", ".parent", function (e) {
 //Function for mouse over the button
 function myOverFunction(e) {
   document
-    .getElementsByTagName("img")[0]
+    .getElementById("ibtn")
     .setAttribute("src", "./img/Group 437(FILL).svg");
   document
-    .getElementsByTagName("video")[0]
+    .getElementById("container")
     .setAttribute("style", "-webkit-mask-image: ''; mask-image: '';");
 }
 
 //Function when mouse leaves the button
 function myLeaveFunction(e) {
+  document.getElementById("ibtn").setAttribute("src", "./img/Group 437.svg");
   document
-    .getElementsByTagName("img")[0]
-    .setAttribute("src", "./img/Group 437.svg");
-  document
-    .getElementsByTagName("video")[0]
+    .getElementById("container")
     .setAttribute(
       "style",
       "-webkit-mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg); mask-image: url(https://kaul-bucket.s3.us-east-2.amazonaws.com/L.svg);"
@@ -97,11 +95,15 @@ function myLeaveFunction(e) {
 }
 
 //Function when mouse clicks on the button
-function myClickFunction(e) {
+async function myClickFunction(e) {
   $(".parent").fadeOut(3000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
-  $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
-  $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
+  // $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
+  // $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
+  document
+    .getElementsByClassName("pmainText")[0]
+    .setAttribute("style", "animation: zoom 7s;");
+  await sleep(4000);
   //Firefox animation only
   if ((verOffset = navigator.userAgent.indexOf("Firefox")) != -1) {
     document
@@ -110,4 +112,11 @@ function myClickFunction(e) {
   }
   $(".mainText").fadeOut();
   $(".page2").fadeIn(5000);
+  await sleep(4000);
+  document.getElementsByClassName("scrollAnimationContainer")[0].style.display =
+    "block";
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
