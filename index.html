@@ -50,7 +50,7 @@
         </div> -->
         <img class="art2" src="./svg/Group 999.svg" />
         <img class="exbHamburger" src="./svg/hamburger.svg" />
-        <div class="slide active">
+        <div class="slider active">
           <img class="exbImage" src="./img/cm28rnmv.bmp" />
           <p class="exbText">
             Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
@@ -63,7 +63,7 @@
             <source src="./video/3d_ocean_1590675653.webm" type="video/webm" />
           </video>
         </div>
-        <div class="slide">
+        <div class="slider">
           <p>Hello</p>
         </div>
       </div>
@@ -100,7 +100,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/script.js"></script>
-    <script type="text/javascript" src="fullpage.continuousHorizontal.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
       integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
@@ -110,11 +109,40 @@
       new fullpage("#page2", {
         autoScrolling: true,
         scrollingSpeed: 2000,
-        scrollHorizontally: true
-      });
-      new fullpage("#section", {
-        scrollHorizontally: true,
-        controlArrows: false,
+        onLeave: function (origin, destination, direction) {
+          var params = {
+            origin: origin,
+            destination: destination,
+            direction: direction,
+          };
+          if ((params.direction = "down")) {
+              console.log(params);
+              var els = document.querySelectorAll(
+                ".art1, .art2, .exbHamburger, .exbImage, .exbText, .exbVideo"
+              );
+
+              for (var i = 0; i < els.length; i++) {
+                els[i].setAttribute(
+                  "style",
+                  "display:block; animation: push ease 0.9s; animation-delay: 2.5s; animation-fill-mode: backwards;"
+                );
+              }
+              var els2 = document.querySelectorAll(".art2, .exbHamburger");
+
+              for (var i = 0; i < els2.length; i++) {
+                els[i].setAttribute(
+                  "style",
+                  "display:block; animation: slide ease 0.9s; animation-delay: 1s; animation-fill-mode: backwards;"
+                );
+              }
+              document
+                .getElementsByClassName("exb")[0]
+                .setAttribute(
+                  "style",
+                  "display:block; animation: slideup ease 1.5s; animation-delay: 1s; animation-fill-mode: backwards;"
+                );
+          }
+        },
       });
     </script>
   </body>

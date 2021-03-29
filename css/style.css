@@ -276,9 +276,46 @@ body {
   align-items: center;
   letter-spacing: 0.2px;
   color: #ffffff;
- 
 }
-.slide
+@keyframes push {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* .art1,
+.exbImage,
+.exbText,
+.exbVideo,
+.art2,
+.exbHamburger
 {
-  overflow-x: scroll;
+  display: none;
+} */
+@keyframes slide {
+  0% {
+    margin-top: -4vw;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0vw;
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    top: 130vh;
+    opacity: 0;
+  }
+  100% {
+    top: 70vh;
+    opacity: 1;
+  }
 }
