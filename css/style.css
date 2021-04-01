@@ -221,6 +221,7 @@ body {
   color: #ffffff;
 }
 .exbHamburger {
+  z-index: 999999;
   position: absolute;
   width: 40px;
   height: 40px;
@@ -277,6 +278,19 @@ body {
   letter-spacing: 0.2px;
   color: #ffffff;
 }
+
+.dstories, .dtalks, .workshop, .ishanya, .alumnitalk, .competitions {
+  position: relative;
+  left: -30vw;
+  top: 34vh;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8vh;
+  color: #ffffff;
+}
+
+
 @keyframes push {
   0% {
     opacity: 0;
