@@ -72,7 +72,13 @@
       </div>
     </div>
     <div id="section" class="section">
-      <p class="competitions">LOL</p>
+      <p class="thText">LOL</p>
+      <img class="thImage1" src="./img/stock.jpg" />
+      <img class="thImage2" src="./img/stock.jpg" />
+      <img class="thImage3" src="./img/stock.jpg" />
+      <img class="thImage4" src="./img/stock.jpg" />
+      <img class="thImage5" src="./img/stock.jpg" />
+      
     </div>
     <div id="section" class="section">
       <p class="competitions">LMAO</p>
@@ -122,7 +128,14 @@
           var els = document.querySelectorAll(
             ".art1, .art2, .exbHamburger, .exbImage, .exbText, .exbVideo"
           );
-
+          if(params.destination.index == 2){
+            document.getElementsByClassName("thText")[0].setAttribute("style","animation: thslideuptext ease 8.2s infinite; animation-delay: 1.2s" );
+            document.getElementsByClassName("thImage1")[0].setAttribute("style","animation: thslideup ease 8s infinite; animation-delay: 1.2s" );
+            document.getElementsByClassName("thImage2")[0].setAttribute("style", "animation: thslideup ease 8.4s infinite; animation-delay: 1.2s");
+            document.getElementsByClassName("thImage3")[0].setAttribute("style","animation: thslideup ease 8.2s infinite; animation-delay: 1.2s" );
+            document.getElementsByClassName("thImage4")[0].setAttribute("style", "animation: thslideup ease 8.1s infinite; animation-delay: 1.2s");
+            document.getElementsByClassName("thImage5")[0].setAttribute("style","animation: thslideup ease 8.2s infinite; animation-delay: 1.2s");
+          }
           for (var i = 0; i < els.length; i++) {
             els[i].setAttribute(
               "style",

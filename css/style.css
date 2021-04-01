@@ -115,12 +115,11 @@ body {
 
   display: inline-block;
 }
-.parent {
-}
 .section {
   background-color: black;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   /* text-align: center;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -279,7 +278,12 @@ body {
   color: #ffffff;
 }
 
-.dstories, .dtalks, .workshop, .ishanya, .alumnitalk, .competitions {
+.dstories,
+.dtalks,
+.workshop,
+.ishanya,
+.alumnitalk,
+.competitions {
   position: relative;
   left: -30vw;
   top: 34vh;
@@ -289,7 +293,6 @@ body {
   font-size: 8vh;
   color: #ffffff;
 }
-
 
 @keyframes push {
   0% {
@@ -332,4 +335,71 @@ body {
     top: 70vh;
     opacity: 1;
   }
+}
+@keyframes thslideup {
+  0% {
+    transform: translateY(0vh);
+  }
+  50% {
+    transform: translateY(-88vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+@keyframes thslideuptext {
+  0% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-26vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+.thText {
+  z-index: 99999;
+  position: absolute;
+  margin-left: 10vw;
+  top: 15vh;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #ffffff;
+}
+.thImage1 {
+  position: absolute;
+  left: 12vw;
+  z-index: 990;
+  top: 20vw;
+}
+.thImage2 {
+  position: absolute;
+  left: 40vw;
+  top: 17vw;
+}
+.thImage3 {
+  left: 74vw;
+  top: 19vw;
+  position: absolute;
+}
+.thImage4 {
+  position: absolute;
+  left: 28vw;
+  top: 120vh;
+  z-index: 990;
+}
+.thImage5 {
+  position: absolute;
+  left: 52vw;
+  z-index: 990;
+  top: 117vh;
 }
