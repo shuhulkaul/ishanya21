@@ -102,7 +102,7 @@ async function myClickFunction(e) {
   $("#container").attr("style", "");
   $(".btn").fadeOut(300);
   await sleep(13000);
-  $(".parent").fadeOut(3000);
+  $(".parent").fadeOut(1000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
   // $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
   // $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
