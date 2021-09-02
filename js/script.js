@@ -97,6 +97,8 @@ function myLeaveFunction(e) {
 //Function when mouse clicks on the button
 async function myClickFunction(e) {
   $(".container").attr("autoplay", "");
+  $("#ibtn").attr("onmouseleave", "");
+  $("#ibtn").attr("onmouseover", "");
   $("#container").attr("style", "");
   $(".btn").fadeOut(300);
   await sleep(13000);
