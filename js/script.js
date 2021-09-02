@@ -75,6 +75,7 @@ $(document).on("click mousemove", ".parent", function (e) {
 
 //Function for mouse over the button
 function myOverFunction(e) {
+  $("#ibtn").hide();
   document
     .getElementById("ibtn")
     .setAttribute("src", "./img/Group 437(FILL).svg");
@@ -85,6 +86,7 @@ function myOverFunction(e) {
 
 //Function when mouse leaves the button
 function myLeaveFunction(e) {
+  $("#ibtn").show();
   document.getElementById("ibtn").setAttribute("src", "./img/Group 437.svg");
   document
     .getElementById("container")
