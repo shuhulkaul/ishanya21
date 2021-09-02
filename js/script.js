@@ -97,8 +97,8 @@ function myLeaveFunction(e) {
 //Function when mouse clicks on the button
 async function myClickFunction(e) {
   $(".container").attr("autoplay", "");
-  $(".parent").fadeOut(3000);
   await sleep(14000);
+  $(".parent").fadeOut(3000);
   $(".mainText").fadeIn({ duration: 1000, queue: true });
   // $(".mainText").animate({ zoom: "115%" }, 2600, "linear");
   // $(".mainText").animate({ zoom: "99999%", opacity: 0 }, 1000);
